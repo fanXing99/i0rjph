@@ -21,11 +21,8 @@ class LoginController extends Controller {
             echo show(0,'密码不能为空');
         }else{
 
-           $ret =  D('Amdin')->getAdminByUsername($username);
+           $ret =  D('Admin')->getAdminByUsername($username);
             print_r($ret);
-
-
-
 
         }
 

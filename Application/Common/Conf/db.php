@@ -14,5 +14,5 @@ return array(
     'DB_POST' => 3306,
     'DB_NAME' => 'fanxing_singcms',
     'DB_CHARSET' => 'utf8',
-    'DB_PREFIX' =>'cms_',
+    'DB_PREFIX' =>'',
 );
