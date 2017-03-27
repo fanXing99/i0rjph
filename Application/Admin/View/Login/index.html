@@ -16,9 +16,6 @@
   <link href="/i0rjph/Public/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom styles for this template -->
   <link href="signin.css" rel="stylesheet">
-
-
-
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
 
@@ -34,7 +31,7 @@
 </style>
 <div class="s_center container col-lg-6 ">
 
-    <form class="form-signin" enctype="multipart/form-data"  method="post">
+    <form class="form-signin" enctype="multipart/form-data"  method="post" >
       <h2 class="form-signin-heading">请登录</h2>
       <label class="sr-only">用户名</label>
       <input type="text"  class="form-control" name="username" placeholder="请填写用户名" required autofocus>
@@ -42,15 +39,17 @@
       <label  class="sr-only">密码</label>
       <input type="password" name="password" id="inputPassword" class="form-control" placeholder="密码" required>
       <br />
-      <button class="btn btn-lg btn-primary btn-block" type="submit" >登录</button>
+      <button class="btn btn-lg btn-primary btn-block"  onclick="login.check()" type="button" >登录</button>
     </form>
-
 </div> <!-- /container -->
+
+
 
 <script src="/i0rjph/Public/js/jquery.js"></script>
 <script src="/i0rjph/Public/js/dialog/layer.js"></script>
 <script src="/i0rjph/Public/js/dialog.js"></script>
 <script src="/i0rjph/Public/js/admin/login.js"></script>
+
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 </body>
