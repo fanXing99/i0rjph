@@ -24,6 +24,8 @@ var login = {
             $.post(url,data,function (result) {
                 if(result.status == 0){
                     dialog.error(result.message);
+                }else if(result.status == 1){
+                    dialog.success(result.message,'/i0rjph/index.php?m=admin&c=index');
                 }
 
             },'JSON');

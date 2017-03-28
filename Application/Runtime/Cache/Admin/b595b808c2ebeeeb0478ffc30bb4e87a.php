@@ -11,25 +11,25 @@
 
     <title>sing后台管理平台</title>
     <!-- Bootstrap Core CSS -->
-    <link href="/Public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/i0rjph/Public/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="/Public/css/sb-admin.css" rel="stylesheet">
+    <link href="/i0rjph/Public/css/sb-admin.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="/Public/css/plugins/morris.css" rel="stylesheet">
+    <link href="/i0rjph/Public/css/plugins/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="/Public/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/i0rjph/Public/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/Public/css/sing/common.css" />
     <link rel="stylesheet" href="/Public/css/party/bootstrap-switch.css" />
     <link rel="stylesheet" type="text/css" href="/Public/css/party/uploadify.css">
 
     <!-- jQuery -->
-    <script src="/Public/js/jquery.js"></script>
-    <script src="/Public/js/bootstrap.min.js"></script>
-    <script src="/Public/js/dialog/layer.js"></script>
-    <script src="/Public/js/dialog.js"></script>
+    <script src="/i0rjph/Public/js/jquery.js"></script>
+    <script src="/i0rjph/Public/js/bootstrap.min.js"></script>
+    <script src="/i0rjph/Public/js/dialog/layer.js"></script>
+    <script src="/i0rjph/Public/js/dialog.js"></script>
     <script type="text/javascript" src="/Public/js/party/jquery.uploadify.js"></script>
 
 </head>
@@ -63,7 +63,7 @@
        
         <li class="divider"></li>
         <li>
-          <a href="/admin.php?c=login&a=loginout"><i class="fa fa-fw fa-power-off"></i> 退出</a>
+          <a href="/i0rjph/index.php?m=admin&c=login&a=loginout"><i class="fa fa-fw fa-power-off"></i> 退出</a>
         </li>
       </ul>
     </li>
@@ -75,7 +75,7 @@
         <a href=""><i class="fa fa-fw fa-dashboard"></i> 首页</a>
       </li>
       <li>
-        <a href=""><i class="fa fa-fw fa-bar-chart-o"></i>菜单管理</a>
+        <a href="/i0rjph/index.php?m=admin&c=index"><i class="fa fa-fw fa-bar-chart-o"></i>菜单管理</a>
       </li>
 
     </ul>
@@ -206,7 +206,7 @@
 </div>
     <!-- /#wrapper -->
 
-<script src="/Public/js/admin/common.js"></script>
+<script src="/i0rjph/Public/js/admin/common.js"></script>
 
 
 
