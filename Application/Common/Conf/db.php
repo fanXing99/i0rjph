@@ -11,7 +11,7 @@ return array(
     'DB_USER' =>  'root',
     'DB_PWD' =>'',
     'DB_POST' => 3306,
-    'DB_NAME' => 'fanxing_singcms',
+    'DB_NAME' => 'imooc_singcms',
     'DB_CHARSET' => 'utf8',
-    'DB_PREFIX' =>'',
+    'DB_PREFIX' =>'cms_',
 );

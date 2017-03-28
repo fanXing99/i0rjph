@@ -26,7 +26,7 @@ class LoginController extends Controller {
             if(!$ret){
                 return show(0,'该用户不存在');
             }
-            if($ret['userpassword'] != getMd5Password($password)){
+            if($ret['password'] != getMd5Password($password)){
                 return show(0,'密码错误');
             }
             session('adminUser',$ret);

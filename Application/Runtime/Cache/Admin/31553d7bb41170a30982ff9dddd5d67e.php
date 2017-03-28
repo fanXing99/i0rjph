@@ -85,7 +85,6 @@
 </nav>
 
     <div id="page-wrapper">
-
     <div class="container-fluid">
 
         <!-- Page Heading -->
@@ -107,7 +106,7 @@
         <div class="row">
             <div class="col-lg-6">
 
-                <form class="form-horizontal" id="singcms-form">
+                <form class="form-horizontal" id="singcms-form"  method="post">
                     <div class="form-group">
                         <label for="inputname" class="col-sm-2 control-label">菜单名:</label>
                         <div class="col-sm-5">
@@ -192,8 +191,8 @@
 <script>
 
     var SCOPE = {
-        'save_url' : '/admin.php?c=menu&a=add',
-        'jump_url' : '/admin.php?c=menu',
+        'save_url' : '/i0rjph/admin.php?c=menu&a=add',
+        'jump_url' : '/i0rjph/admin.php?c=menu',
     }
 </script>
 <script src="/i0rjph/Public/js/admin/common.js"></script>
