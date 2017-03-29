@@ -39,3 +39,27 @@ function status($status){
     }
     return $str;
 }
+
+function getAdminMenuUrl($nav){
+
+
+    $url = '/i0rjph/admin.php?c='.$nav['c'].$nav['a'];
+
+    if($nav['f'] == 'index'){
+
+        $url = '/i0rjph/admin.php?c='.$nav['c'];
+    }
+    return $url;
+}
+
+function getActive($navc){
+
+    $c =  strtolower(CONTROLLER_NAME);
+
+    if(strtolower($navc) == $c ){
+
+        return 'class="active"';
+    }
+
+    return '';
+}

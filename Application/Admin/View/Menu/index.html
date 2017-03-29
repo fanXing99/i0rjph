@@ -21,13 +21,13 @@
         </div>
         <!-- /.row -->
         <div class="row">
-            <form action="/admin.php" method="get">
+            <form action="/i0rjph/admin.php" method="get">
                 <div class="input-group">
                     <span class="input-group-addon">类型</span>
                     <select class="form-control" name="type">
                         <option value='' >请选择类型</option>
-                        <option value="1" >后台菜单</option>
-                        <option value="0" >前端导航</option>
+                        <option value="1" <if condition="$type eq 1">selected="selected"</if> >后台菜单</option>
+                        <option value="0" <if condition="$type eq 0">selected="selected"</if> >前端导航</option>
                     </select>
                 <input type="hidden" name="c" value="menu"/>
                 <input type="hidden" name="a" value="index"/>
@@ -62,41 +62,40 @@
                         <tbody>
                         <volist name="menus" id="menu">
                             <tr>
-                                <td><input size="4" type="text" name="" value=""/></td>
+                                <td><input size="4" type="text" name="listorder[{$menu.menu_id}]" value="{$menu.listorder}"/></td>
                                 <td>{$menu.menu_id}</td>
                                 <td>{$menu.name}</td>
                                 <td>{$menu.m}</td>
                                 <td>{$menu.type|getMenuType}</td>
                                 <td>{$menu.status|status}</td>
-                                <td><span class="glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id=""></span>    <a href="javascript:void(0)" attr-id="" id="singcms-delete"  attr-a="menu" attr-message="删除"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a></td>
+                                <td><span class="glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="{$menu.menu_id}"></span>    <a href="javascript:void(0)" attr-id="{$menu.menu_id}" id="singcms-delete"  attr-a="menu" attr-message="删除"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a></td>
                             </tr>
                         </volist>
-
                         </tbody>
                     </table>
                     </form>
+
                     <nav>
                         <ul class="pagination">
                             {$pageRes}
                         </ul>
                     </nav>
+                    <button  id="button-listorder" type="button" class="btn btn-primary dropdown-toggle" ><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>更新排序 </button>
+
                 </div>
             </div>
 
         </div>
         <!-- /.row -->
-
     </div>
     <!-- /.container-fluid -->
 
 </div>
 <!-- /#page-wrapper -->
-
 </div>
 <!-- /#wrapper -->
 <!-- Morris Charts JavaScript -->
 <script>
-
     var SCOPE = {
         'add_url' : '/i0rjph/admin.php?c=menu&a=add',
         'edit_url' : '/i0rjph/admin.php?c=menu&a=edit',

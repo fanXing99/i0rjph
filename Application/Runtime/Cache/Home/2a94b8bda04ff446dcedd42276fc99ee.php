@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>sing资讯</title>
+
   <link rel="stylesheet" href="/Public/css/bootstrap.min.css" type="text/css" />
   <link rel="stylesheet" href="/Public/css/home/main.css" type="text/css" />
 </head>
