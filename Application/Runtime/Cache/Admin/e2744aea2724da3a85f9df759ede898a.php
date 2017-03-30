@@ -138,9 +138,9 @@
               <div class="col-sm-5">
                 <select class="form-control" name="title_font_color">
                   <option value="">==请选择颜色==</option>
-                    
-                      <option value=""></option>
-                    
+
+                  <?php if(is_array($titleFontColor)): foreach($titleFontColor as $key=>$color): ?><option value="<?php echo ($key); ?>"> <?php echo ($color); ?></option><?php endforeach; endif; ?>
+
                 </select>
               </div>
             </div>
@@ -149,7 +149,11 @@
               <div class="col-sm-5">
                 <select class="form-control" name="catid">
 
-                    <option value=""></option>
+
+
+                  <?php if(is_array($webSitMenus)): foreach($webSitMenus as $key=>$menu): ?><option value="<?php echo ($menu["menu_id"]); ?>"> <?php echo ($menu["name"]); ?></option><?php endforeach; endif; ?>
+
+
                 </select>
               </div>
             </div>
@@ -158,8 +162,8 @@
               <label for="inputname" class="col-sm-2 control-label">来源:</label>
               <div class="col-sm-5">
                 <select class="form-control" name="copyfrom">
+                  <?php if(is_array($copyFrom)): foreach($copyFrom as $key=>$fromname): ?><option value="<?php echo ($key); ?>"> <?php echo ($fromname); ?></option><?php endforeach; endif; ?>
 
-                    <option value=""></option>
                 </select>
               </div>
             </div>

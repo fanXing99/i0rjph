@@ -2,7 +2,10 @@
  * Created by fanxing on 17/3/28.
  */
 
-
+/**
+ *  HOST
+ */
+const HOST = 'http://localhost';
 /**
  *  添加操作
  */

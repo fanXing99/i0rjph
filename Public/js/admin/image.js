@@ -17,7 +17,7 @@ $(function() {
                 console.log(data);
                 $('#' + file.id).find('.data').html(' 上传完毕');
 
-                $("#upload_org_code_img").attr("src",obj.data);
+                $("#upload_org_code_img").attr("src", HOST +'/i0rjph'+obj.data);
                 $("#file_upload_image").attr('value',obj.data);
                 $("#upload_org_code_img").show();
             }else{
@@ -26,8 +26,4 @@ $(function() {
         },
     });
 });
-
-
-
-
 

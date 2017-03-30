@@ -63,3 +63,21 @@ function getActive($navc){
 
     return '';
 }
+
+
+function showKind($status,$data){
+
+    header('Content-type:application/json;charset=utf-8');
+
+    if($status == 0){
+        exit(json_encode(array('error'=>0,'url'=>$data)));
+    }
+    exit(json_encode(array('error'=>1,'message'=>$data)));
+
+
+}
+
+
+function getLoginUsername(){
+    return $_SESSION['adminUser']['username'] ? $_SESSION['adminUser']['username']:'';
+}

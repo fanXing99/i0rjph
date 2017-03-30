@@ -22,16 +22,16 @@
 
     <!-- Custom Fonts -->
     <link href="/i0rjph/Public/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="/Public/css/sing/common.css" />
-    <link rel="stylesheet" href="/Public/css/party/bootstrap-switch.css" />
-    <link rel="stylesheet" type="text/css" href="/Public/css/party/uploadify.css">
+    <link rel="stylesheet" href="/i0rjph/Public/css/sing/common.css" />
+    <link rel="stylesheet" href="/i0rjph/Public/css/party/bootstrap-switch.css" />
+    <link rel="stylesheet" type="text/css" href="/i0rjph/Public/css/party/uploadify.css">
 
     <!-- jQuery -->
     <script src="/i0rjph/Public/js/jquery.js"></script>
     <script src="/i0rjph/Public/js/bootstrap.min.js"></script>
     <script src="/i0rjph/Public/js/dialog/layer.js"></script>
     <script src="/i0rjph/Public/js/dialog.js"></script>
-    <script type="text/javascript" src="/Public/js/party/jquery.uploadify.js"></script>
+    <script type="text/javascript" src="/i0rjph/Public/js/party/jquery.uploadify.js"></script>
 
 </head>
 
@@ -44,6 +44,10 @@
 <div id="wrapper">
 
     
+
+<?php
+ $navs = D('Menu')->getAdminMenus(); $index = 'index'; ?>
+
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
@@ -72,12 +76,14 @@
   <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav side-nav nav_list">
-      <li >
+      <li <?php echo (getActive($index)); ?> >
         <a href="/i0rjph/index.php?m=admin&c=index"><i class="fa fa-fw fa-dashboard"></i> 首页</a>
       </li>
-      <li>
-        <a href="/i0rjph/index.php?m=admin&c=menu"><i class="fa fa-fw fa-bar-chart-o"></i>菜单管理</a>
-      </li>
+
+      <?php if(is_array($navs)): $i = 0; $__LIST__ = $navs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?><li <?php echo (getActive($nav["c"])); ?>>
+          <a href="<?php echo (getAdminMenuUrl($nav)); ?>"><i class="fa fa-fw fa-bar-chart-o"></i><?php echo ($nav["name"]); ?></a>
+        </li><?php endforeach; endif; else: echo "" ;endif; ?>
+
 
     </ul>
   </div>
