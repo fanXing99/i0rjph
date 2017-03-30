@@ -21,16 +21,16 @@
 
     <!-- Custom Fonts -->
     <link href="/i0rjph/Public/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="/Public/css/sing/common.css" />
-    <link rel="stylesheet" href="/Public/css/party/bootstrap-switch.css" />
-    <link rel="stylesheet" type="text/css" href="/Public/css/party/uploadify.css">
+    <link rel="stylesheet" href="/i0rjph/Public/css/sing/common.css" />
+    <link rel="stylesheet" href="/i0rjph/Public/css/party/bootstrap-switch.css" />
+    <link rel="stylesheet" type="text/css" href="/i0rjph/Public/css/party/uploadify.css">
 
     <!-- jQuery -->
     <script src="/i0rjph/Public/js/jquery.js"></script>
     <script src="/i0rjph/Public/js/bootstrap.min.js"></script>
     <script src="/i0rjph/Public/js/dialog/layer.js"></script>
     <script src="/i0rjph/Public/js/dialog.js"></script>
-    <script type="text/javascript" src="/Public/js/party/jquery.uploadify.js"></script>
+    <script type="text/javascript" src="/i0rjph/Public/js/party/jquery.uploadify.js"></script>
 
 </head>
 
@@ -207,12 +207,12 @@
 <!-- /#wrapper -->
 <script>
   var SCOPE = {
-    'edit_url' : '/admin.php?c=content&a=edit',
-    'add_url' : '/admin.php?c=content&a=add',
-    'set_status_url' : '/admin.php?c=content&a=setStatus',
-    'sing_news_view_url' : '/index.php?c=view',
-    'listorder_url' : '/admin.php?c=content&a=listorder',
-    'push_url' : '/admin.php?c=content&a=push',
+    'edit_url' : '/i0rjph/admin.php?c=content&a=edit',
+    'add_url' : '/i0rjph/admin.php?c=content&a=add',
+    'set_status_url' : '/i0rjph/admin.php?c=content&a=setStatus',
+    'sing_news_view_url' : '/i0rjph/index.php?c=view',
+    'listorder_url' : '/i0rjph/admin.php?c=content&a=listorder',
+    'push_url' : '/i0rjph/admin.php?c=content&a=push',
   }
 </script>
 <script src="/i0rjph/Public/js/admin/common.js"></script>

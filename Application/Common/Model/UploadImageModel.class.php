@@ -28,10 +28,8 @@ class UploadImageModel extends Model {
             return false;
         }
     }
-
-    public function imageUpload() {
+    public function imageUpload(){
         $res = $this->_uploadObj->upload();
-
         if($res) {
             return '/' .self::UPLOAD . '/' . $res['file']['savepath'] . $res['file']['savename'];
         }else{

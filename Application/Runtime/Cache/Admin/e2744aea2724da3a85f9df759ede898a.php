@@ -1,8 +1,92 @@
-<include file="Index/header" />
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>sing后台管理平台</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="/i0rjph/Public/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/i0rjph/Public/css/sb-admin.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="/i0rjph/Public/css/plugins/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/i0rjph/Public/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/i0rjph/Public/css/sing/common.css" />
+    <link rel="stylesheet" href="/i0rjph/Public/css/party/bootstrap-switch.css" />
+    <link rel="stylesheet" type="text/css" href="/i0rjph/Public/css/party/uploadify.css">
+
+    <!-- jQuery -->
+    <script src="/i0rjph/Public/js/jquery.js"></script>
+    <script src="/i0rjph/Public/js/bootstrap.min.js"></script>
+    <script src="/i0rjph/Public/js/dialog/layer.js"></script>
+    <script src="/i0rjph/Public/js/dialog.js"></script>
+    <script type="text/javascript" src="/i0rjph/Public/js/party/jquery.uploadify.js"></script>
+
+</head>
+
+    
+
+
+
 <body>
 <div id="wrapper">
 
-  <include file="Index/nav"/>
+  
+
+<?php
+ $navs = D('Menu')->getAdminMenus(); $index = 'index'; ?>
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    
+    <a class="navbar-brand" >singcms内容管理平台</a>
+  </div>
+  <!-- Top Menu Items -->
+  <ul class="nav navbar-right top-nav">
+    
+    
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+      <ul class="dropdown-menu">
+        <li>
+          <a href="/admin.php?c=admin&a=personal"><i class="fa fa-fw fa-user"></i> 个人中心</a>
+        </li>
+       
+        <li class="divider"></li>
+        <li>
+          <a href="/i0rjph/index.php?m=admin&c=login&a=loginout"><i class="fa fa-fw fa-power-off"></i> 退出</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav side-nav nav_list">
+      <li <?php echo (getActive($index)); ?> >
+        <a href="/i0rjph/index.php?m=admin&c=index"><i class="fa fa-fw fa-dashboard"></i> 首页</a>
+      </li>
+
+      <?php if(is_array($navs)): $i = 0; $__LIST__ = $navs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?><li <?php echo (getActive($nav["c"])); ?>>
+          <a href="<?php echo (getAdminMenuUrl($nav)); ?>"><i class="fa fa-fw fa-bar-chart-o"></i><?php echo ($nav["name"]); ?></a>
+        </li><?php endforeach; endif; else: echo "" ;endif; ?>
+
+
+    </ul>
+  </div>
+  <!-- /.navbar-collapse -->
+</nav>
 
   <script src="/i0rjph/Public/js/kindeditor/kindeditor-all.js"></script>
   <div id="page-wrapper">
@@ -140,4 +224,10 @@
     });
   });
 </script>
-<include file="Index/footer" />
+<script src="/i0rjph/Public/js/admin/common.js"></script>
+
+
+
+</body>
+
+</html>
