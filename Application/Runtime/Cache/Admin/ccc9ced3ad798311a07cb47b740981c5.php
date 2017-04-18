@@ -116,8 +116,9 @@
               <span class="input-group-addon">栏目</span>
               <select class="form-control" name="catid">
                 <option value='' >全部分类</option>
-                
-                <option value="" ></option>
+
+                <?php if(is_array($webSiteMenu)): foreach($webSiteMenu as $key=>$sitenav): ?><option value="{sitenav.menu_id}" ><?php echo ($sitenav["name"]); ?></option><?php endforeach; endif; ?>
+
                 
               </select>
             </div>

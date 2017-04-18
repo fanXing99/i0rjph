@@ -6,6 +6,7 @@ use Think\Controller;
  * use Common\Model 这块可以不需要使用，框架默认会加载里面的内容
  */
 class LoginController extends Controller {
+
     public function index(){
         if(session('adminUser')){
              $this->redirect('/i0rjph/index.php?m=admin&c=index');
@@ -13,6 +14,7 @@ class LoginController extends Controller {
     	 $this->display();
     }
     public function check(){
+
 
         $username = $_POST['username'];
         $password = $_POST['password'];
@@ -37,4 +39,6 @@ class LoginController extends Controller {
         session('adminUser',null);
         $this->redirect('/i0rjph/index.php?m=admin&c=login&a=index');
     }
+
+
 }
